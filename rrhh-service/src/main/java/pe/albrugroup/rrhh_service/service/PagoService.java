@@ -8,7 +8,7 @@ import pe.albrugroup.rrhh_service.entity.Pago;
 import pe.albrugroup.rrhh_service.entity.request.RegistrarPagoRequest;
 import pe.albrugroup.rrhh_service.entity.response.PagoResponse;
 import pe.albrugroup.rrhh_service.exception.PagoContratoInactivoException;
-import pe.albrugroup.rrhh_service.mapper.PagoMapper;
+import pe.albrugroup.rrhh_service.service.mapper.PagoMapper;
 import pe.albrugroup.rrhh_service.repository.ContratoRepository;
 import pe.albrugroup.rrhh_service.repository.PagoRepository;
 import pe.albrugroup.rrhh_service.usecase.IPago;

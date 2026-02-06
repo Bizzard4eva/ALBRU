@@ -13,7 +13,7 @@ import pe.albrugroup.rrhh_service.entity.response.EmpleadoResponse;
 import pe.albrugroup.rrhh_service.exception.EmpleadoInactivoException;
 import pe.albrugroup.rrhh_service.exception.EmpleadoNotFoundException;
 import pe.albrugroup.rrhh_service.exception.EmpleadoPostulanteException;
-import pe.albrugroup.rrhh_service.mapper.EmpleadoMapper;
+import pe.albrugroup.rrhh_service.service.mapper.EmpleadoMapper;
 import pe.albrugroup.rrhh_service.repository.EmpleadoRepository;
 import pe.albrugroup.rrhh_service.usecase.IEmpleado;
 

@@ -10,7 +10,7 @@ import pe.albrugroup.rrhh_service.entity.response.ContratoResponse;
 import pe.albrugroup.rrhh_service.exception.ContratoActivoNotFoundException;
 import pe.albrugroup.rrhh_service.exception.ContratoNotFoundException;
 import pe.albrugroup.rrhh_service.exception.EmpleadoNotFoundException;
-import pe.albrugroup.rrhh_service.mapper.ContratoMapper;
+import pe.albrugroup.rrhh_service.service.mapper.ContratoMapper;
 import pe.albrugroup.rrhh_service.repository.ContratoRepository;
 import pe.albrugroup.rrhh_service.repository.EmpleadoRepository;
 import pe.albrugroup.rrhh_service.usecase.IContrato;

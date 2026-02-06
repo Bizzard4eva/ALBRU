@@ -1,4 +1,4 @@
-package pe.albrugroup.rrhh_service.mapper;
+package pe.albrugroup.rrhh_service.service.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
