@@ -3,7 +3,6 @@ package pe.albrugroup.rrhh_service.entity.request;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.PastOrPresent;
 import lombok.*;
 import pe.albrugroup.rrhh_service.entity.enums.Modalidad;
 import pe.albrugroup.rrhh_service.entity.enums.PuestoTrabajo;
@@ -11,7 +10,7 @@ import pe.albrugroup.rrhh_service.entity.enums.PuestoTrabajo;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Builder @Getter @Setter
+@Builder(toBuilder = true) @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 public class RegistrarContratoRequest {
 

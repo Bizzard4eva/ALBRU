@@ -33,4 +33,7 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
 
     // Verificar si existe un empleado con ese número de documento
     boolean existsByNumeroDocumento(String numeroDocumento);
+
+    // Buscar empleado por ID que no esté INACTIVO
+    Optional<Empleado> findByIdAndEstadoOperativoNot(Long id, EstadoOperativo estadoOperativo);
 }

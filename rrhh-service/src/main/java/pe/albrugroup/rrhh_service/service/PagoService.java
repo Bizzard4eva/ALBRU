@@ -15,6 +15,7 @@ import pe.albrugroup.rrhh_service.usecase.IPago;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.IntStream;
 
 @Service
 @Transactional
@@ -37,11 +38,6 @@ public class PagoService implements IPago {
                 .map(mapper::toResponse)
                 .toList();
     }
-
-    @Override
-    public List<PagoResponse> registrarPagos(List<Long> idContratos, List<RegistrarPagoRequest> nuevosPagos) {
-        return List.of();
-    }
     @Override
     public PagoResponse registrarPago(Long idContrato, RegistrarPagoRequest nuevoPago) {
         LocalDate hoy = LocalDate.now();
@@ -49,6 +45,15 @@ public class PagoService implements IPago {
                 .orElseThrow(() -> new PagoContratoInactivoException(idContrato));
         Pago pago = mapper.toEntity(nuevoPago);
         pago.setContrato(contrato);
-        return mapper.toResponse(pago);
+        return mapper.toResponse(pagoRepository.save(pago));
+    }
+
+    @Override
+    public List<PagoResponse> registrarPagos(List<Long> idContratos, List<RegistrarPagoRequest> nuevosPagos) {
+        return IntStream.range(0, idContratos.size())
+                .mapToObj(i -> registrarPago(
+                        idContratos.get(i),
+                        nuevosPagos.get(i)
+                )).toList();
     }
 }

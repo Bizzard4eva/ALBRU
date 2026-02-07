@@ -5,7 +5,7 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Builder @Getter @Setter
+@Builder(toBuilder = true) @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 public class RegistrarPagoRequest {
 
