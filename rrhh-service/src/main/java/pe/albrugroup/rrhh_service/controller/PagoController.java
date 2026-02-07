@@ -1,5 +1,6 @@
 package pe.albrugroup.rrhh_service.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Positive;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController @Validated
 @RequiredArgsConstructor
+@Tag(name = "Pagos", description = "Gestion y registro de Pagos en contratos activos")
 @RequestMapping("/pagos")
 public class PagoController {
 
